@@ -1,0 +1,6 @@
+<x-layout::auth>
+    <x-slot name="header">
+        Hallo
+    </x-slot>
+
+</x-layout::app>

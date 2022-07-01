@@ -1,0 +1,32 @@
+{
+    "name": "leeuwenkasteel/auth",
+    "description": "authentication for leeuwenkasteel packages",
+    "type": "package",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Sanne van Leeuwen",
+            "email": "sanne@leeuwenkasteel.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "leeuwenkasteel/form": "dev-main",
+        "leeuwenkasteel/table": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leeuwenkasteel\\Auth\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Leeuwenkasteel\\Auth\\AuthServiceProvider"
+            ]
+        },
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
