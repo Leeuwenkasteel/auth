@@ -27,6 +27,9 @@ class Auth extends Command
         $this->callSilent('messages:install');
         $this->info("Messages is installed ");
 
+        $this->callSilent('icons:install');
+        $this->info("Icons is installed ");
+
         $userModel = file_get_contents(__DIR__."/../resources/stubs/user.stub");
         file_put_contents(app_path("Models/User.php"), $userModel);
         $this->info("User Model us published ");
