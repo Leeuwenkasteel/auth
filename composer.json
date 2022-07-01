@@ -13,7 +13,8 @@
     "require": {
         "leeuwenkasteel/form": "1.0.x-dev",
         "leeuwenkasteel/table": "1.0.x-dev",
-        "leeuwenkasteel/helpers": "1.0.x-dev"
+        "leeuwenkasteel/helpers": "1.0.x-dev",
+        "leeuwenkasteel/layout": "1.0.x-dev"
     },
     "autoload": {
         "psr-4": {
