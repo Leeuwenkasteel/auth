@@ -20,11 +20,11 @@ class Auth extends Command
         $this->callSilent('db:seed', ['--class' => 'AuthSeeder']);
         $this->info("Seeds ");
         $this->callSilent('vendor:publish', ['--tag' => 'auth_config']);
-        
-        $this->callSilent('vendor:publish', ['layout:install']);
+
+        $this->callSilent('layout:install');
         $this->info("Layout is installed ");
 
-        $this->callSilent('vendor:publish', ['messages:install']);
+        $this->callSilent('messages:install');
         $this->info("Messages is installed ");
 
         $userModel = file_get_contents(__DIR__."/../resources/stubs/user.stub");
