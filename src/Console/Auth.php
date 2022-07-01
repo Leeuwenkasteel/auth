@@ -12,6 +12,15 @@ class Auth extends Command
 
     public function handle()
     {
+        $this->callSilent('vendor:publish', ['--tag' => 'auth_migrations']);
+        $this->callSilent('migrate');
+        $this->info("Migrated ");
+
+        $this->callSilent('vendor:publish', ['--tag' => 'auth_seeders']);
+        $this->callSilent('db:seed', ['--class' => 'AuthSeeder']);
+        $this->info("Seeds ");
+        $this->callSilent('vendor:publish', ['--tag' => 'auth_config']);
+        
         $this->callSilent('vendor:publish', ['layout:install']);
         $this->info("Layout is installed ");
 
@@ -32,14 +41,7 @@ class Auth extends Command
 
         $this->info("Dashboard us published ");
 
-        $this->callSilent('vendor:publish', ['--tag' => 'auth_migrations']);
-        $this->callSilent('migrate');
-        $this->info("Migrated ");
-
-        $this->callSilent('vendor:publish', ['--tag' => 'auth_seeders']);
-        $this->callSilent('db:seed', ['--class' => 'AuthSeeder']);
-        $this->info("Seeds ");
-        $this->callSilent('vendor:publish', ['--tag' => 'auth_config']);
+        
 
         $this->info("The packages is installed");
         
