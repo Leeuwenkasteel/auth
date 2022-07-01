@@ -12,7 +12,8 @@
     "minimum-stability": "dev",
     "require": {
         "leeuwenkasteel/form": "dev-main",
-        "leeuwenkasteel/table": "dev-main"
+        "leeuwenkasteel/table": "dev-main",
+        "leeuwenkasteel/helpers": "dev-main"
     },
     "autoload": {
         "psr-4": {
